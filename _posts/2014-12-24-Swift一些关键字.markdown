@@ -1,6 +1,6 @@
 ---
 title: Swift一些关键字
-date: 2013-12-08 19:55:16
+date: 2014-12-24 19:55:16
 categories: jekyll testing
 ---
 
@@ -15,17 +15,14 @@ categories: jekyll testing
 
 延迟属性很有用，当属性的值依赖于在实例的构造过程结束前无法知道具体值的外部因素时，或者当属性的值需要复杂或大量计算时，可以只在需要的时候来计算它。
 
-### Screenshots
-
-![screenshot]({{ site.baseurl }}/images/screenshot1.png)
-![screenshot]({{ site.baseurl }}/images/screenshot2.png)
 
 ### convenience
 
 Class中负责初始化所有properties、调用super.init的init方法都是Designated Initializers. 比如上面的init方法都是。 Designated Initializers中不能调用其他init方法，只能必须（如果有super）调用super.init 
 有时候我们需要通过不同的方式init，但是又想重用部分代码，这里引入了convenience关键字来修饰init，实现Convenience Initializers。 比如
-  convenience init(p:Person) {
-      self.init(name:p.name, age:p.age)
+  convenience init(p:Person)
+  {
+  		self.init(name:p.name, age:p.age)
   }
 Convenience Initializers内部需要遵循以下规则以保证super.init只调用1次
 可以调用某个Convenience Initializer或者Designated Initializer，注意只能调用1次。
@@ -36,9 +33,3 @@ Convenience Initializers内部需要遵循以下规则以保证super.init只调�
 
 在 swift 中，包含三种类型(type): structure , enumeration , class 其中structure和enumeration是值类型( value type ),class是引用类型( reference type ) 但是与objective-c不同的是，structure和enumeration也可以拥有方法(method)，其中方法可以为实例方法(instance method)，也可以为类方法(type method)，实例方法是和类型的一个实例绑定的。
 
--------------
-Herring Cove is always a work in progress and as such, I hope to clean up the code and add features as time permits. Feel free to add your own additions.
-
-*What's with the name?*
-
-[Herring Cove](http://www.capecodbeachchair.com/beachguide/index.cfm?page=3&BeachID=5) is a beach on Cape Cod in Provincetown, Massachusetts. If you're in the area, be sure to check it out!
