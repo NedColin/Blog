@@ -6,16 +6,25 @@ summary:    @lazy convenience mutating typealias.
 categories: jekyll pixyll
 ---
 
-@lazy
+<h3 id="stylish-blockquotes-included">@lazy</h3>
 
-延迟存储属性是指当第一次被调用的时候才会计算其初始值的属性。在属性声明前使用@lazy来标示一个延迟存储属性。
+<blockquote>
+  <p>
+	延迟存储属性是指当第一次被调用的时候才会计算其初始值的属性。在属性声明前使用@lazy来标示一个延迟存储属性。
 
-注意：必须将延迟存储属性声明成变量（使用var关键字），因为属性的值在实例构造完成之前可能无法得到。而常量属性在构造过程完成之前必须要有初始值，因此无法声明成延迟属性。
+	注意：必须将延迟存储属性声明成变量（使用var关键字），因为属性的值在实例构造完成之前可能无法得到。而常量属性在构造过程完成之前必须要有初始值，因此无法声明成延迟属性。
 
-延迟属性很有用，当属性的值依赖于在实例的构造过程结束前无法知道具体值的外部因素时，或者当属性的值需要复杂或大量计算时，可以只在需要的时候来计算它。
+	延迟属性很有用，当属性的值依赖于在实例的构造过程结束前无法知道具体值的外部因素时，或者当属性的值需要复杂或大量计算时，可以只在需要的时候来计算它。
+  </p>
+  <footer><cite title="">延迟属性</cite></footer>
+</blockquote>
 
-convenience
-lass中负责初始化所有properties、调用super.init的init方法都是Designated Initializers. 比如上面的init方法都是。 Designated Initializers中不能调用其他init方法，只能必须（如果有super）调用super.init 
+
+<h3 id="stylish-blockquotes-included">convenience</h3>
+
+<blockquote>
+  <p>
+  	Class中负责初始化所有properties、调用super.init的init方法都是Designated Initializers. 比如上面的init方法都是。 Designated Initializers中不能调用其他init方法，只能必须（如果有super）调用super.init 
 有时候我们需要通过不同的方式init，但是又想重用部分代码，这里引入了convenience关键字来修饰init，实现Convenience Initializers。 比如
   convenience init(p:Person) {
       self.init(name:p.name, age:p.age)
@@ -23,9 +32,20 @@ lass中负责初始化所有properties、调用super.init的init方法都是Desi
 Convenience Initializers内部需要遵循以下规则以保证super.init只调用1次
 可以调用某个Convenience Initializer或者Designated Initializer，注意只能调用1次。
 绝对不能调用super.init
-必须保证Designated Initializer直接或者间接的被调用1次
+  </p>
+  <footer><cite title="">注意：必须保证Designated Initializer直接或者间接的被调用1次</cite></footer>
+</blockquote>
 
-mutating
+
+
+
+
+<h3 id="stylish-blockquotes-included">mutating</h3>
+
+
+<blockquote>
+  <p>
+
 
 在 swift 中，包含三种类型(type): structure , enumeration , class
 
@@ -61,10 +81,16 @@ ovenLight.next()// ovenLight is now equal to .High ovenLight.next()// ovenLight 
 TriStateSwitch枚举定义了一个三个状态的开关，在next实例方法中动态改变self属性的值。
 
 当然，在引用类型中(即class)中的方法默认情况下就可以修改属性值，不存在以上问题。
+  </p>
+  <footer><cite title="">注意：必须保证Designated Initializer直接或者间接的被调用1次</cite></footer>
+</blockquote>
 
-typealias
 
-类型别名(type aliases)就是给现有类型定义另一个名字。你可以使用typealias关键字来定义类型别名。
+<h3 id="stylish-blockquotes-included">typealias</h3>
+
+<blockquote>
+  <p>
+  	类型别名(type aliases)就是给现有类型定义另一个名字。你可以使用typealias关键字来定义类型别名。
 
 当你想要给现有类型起一个更有意义的名字时，类型别名非常有用。假设你正在处理特定长度的外部资源的数据：
 
@@ -74,6 +100,10 @@ typealias AudioSample = UInt16
 var maxAmplitudeFound = AudioSample.min
 // maxAmplitudeFound 现在是 0
 本例中，AudioSample被定义为UInt16的一个别名。因为它是别名，AudioSample.min实际上是UInt16.min，所以会给maxAmplitudeFound赋一个初值0。
+  </p>
+  <footer><cite title="">注意：必须保证Designated Initializer直接或者间接的被调用1次</cite></footer>
+</blockquote>
+
 
 <blockquote>
   <p>
