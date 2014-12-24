@@ -1,0 +1,44 @@
+---
+title: Swift一些关键字
+date: 2013-12-08 19:55:16
+categories: jekyll testing
+---
+
+刚学swift，对于一些常用的关键字如下
+
+
+### @lazy属性
+
+延迟存储属性是指当第一次被调用的时候才会计算其初始值的属性。在属性声明前使用@lazy来标示一个延迟存储属性。
+
+注意：必须将延迟存储属性声明成变量（使用var关键字），因为属性的值在实例构造完成之前可能无法得到。而常量属性在构造过程完成之前必须要有初始值，因此无法声明成延迟属性。
+
+延迟属性很有用，当属性的值依赖于在实例的构造过程结束前无法知道具体值的外部因素时，或者当属性的值需要复杂或大量计算时，可以只在需要的时候来计算它。
+
+### Screenshots
+
+![screenshot]({{ site.baseurl }}/images/screenshot1.png)
+![screenshot]({{ site.baseurl }}/images/screenshot2.png)
+
+### convenience
+
+Class中负责初始化所有properties、调用super.init的init方法都是Designated Initializers. 比如上面的init方法都是。 Designated Initializers中不能调用其他init方法，只能必须（如果有super）调用super.init 
+有时候我们需要通过不同的方式init，但是又想重用部分代码，这里引入了convenience关键字来修饰init，实现Convenience Initializers。 比如
+  convenience init(p:Person) {
+      self.init(name:p.name, age:p.age)
+  }
+Convenience Initializers内部需要遵循以下规则以保证super.init只调用1次
+可以调用某个Convenience Initializer或者Designated Initializer，注意只能调用1次。
+绝对不能调用super.init
+必须保证Designated Initializer直接或者间接的被调用1次
+
+### mutating
+
+在 swift 中，包含三种类型(type): structure , enumeration , class 其中structure和enumeration是值类型( value type ),class是引用类型( reference type ) 但是与objective-c不同的是，structure和enumeration也可以拥有方法(method)，其中方法可以为实例方法(instance method)，也可以为类方法(type method)，实例方法是和类型的一个实例绑定的。
+
+-------------
+Herring Cove is always a work in progress and as such, I hope to clean up the code and add features as time permits. Feel free to add your own additions.
+
+*What's with the name?*
+
+[Herring Cove](http://www.capecodbeachchair.com/beachguide/index.cfm?page=3&BeachID=5) is a beach on Cape Cod in Provincetown, Massachusetts. If you're in the area, be sure to check it out!
