@@ -32,4 +32,10 @@ Convenience Initializers内部需要遵循以下规则以保证super.init只调�
 ### mutating
 
 在 swift 中，包含三种类型(type): structure , enumeration , class 其中structure和enumeration是值类型( value type ),class是引用类型( reference type ) 但是与objective-c不同的是，structure和enumeration也可以拥有方法(method)，其中方法可以为实例方法(instance method)，也可以为类方法(type method)，实例方法是和类型的一个实例绑定的。
+-------------
+Herring Cove is always a work in progress and as such, I hope to clean up the code and add features as time permits. Feel free to add your own additions.
+
+*What's with the name?*
+
+[Herring Cove](http://www.capecodbeachchair.com/beachguide/index.cfm?page=3&BeachID=5) is a beach on Cape Cod in Provincetown, Massachusetts. If you're in the area, be sure to check it out!
 
