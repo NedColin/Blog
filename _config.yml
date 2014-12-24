@@ -1,16 +1,16 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
-baseurl:     ""
+title:       Ned
+email:       weixuegg@gmail.com
+author:      Ned Colin
+description: "积厚薄发"
+baseurl:     "/NedJekyll"
 url:         "http://pixyll.com"
 
 # Google analytics
 google_analytics:
 
 # Optional features
-animated:           false
+animated:           true
 show_related_posts: false
 show_post_footers:  false
 
