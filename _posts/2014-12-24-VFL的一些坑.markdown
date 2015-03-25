@@ -1,0 +1,17 @@
+---
+title: Swift一些关键字
+date: 2014-12-24 19:55:16
+categories: jekyll testing
+---
+
+### VFL对于默认Trailing和Leading的默认值在不同系统下不一样
+
+实测情况下 在iOS 8.1.2下
+@"H:|-[View]-|"是triling和leading都为0，
+但在iOS 7.1.2下@"H:|-[View]-|"却不起作用，改为@"H:|-0-[View]-0-|"即可。
+
+### metric字典里的值再加上固定值会报错
+即@"|-originalX-20-[view]"，VLF无法解析。
+
+### "self.view"引起VFL无法被解析
+http://stackoverflow.com/questions/13045178/nsinvalidargumentexception-reason-unable-to-parse-constraint-format
