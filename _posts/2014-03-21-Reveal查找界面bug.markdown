@@ -7,6 +7,7 @@ categories: jekyll testing
 Reveal可以实时查看当前界面视图层次，很有助于界面debug,步骤如下:
 
 需要越狱的机器一台，安装Openssh和Cydia SubStrate（一个减少卡顿和崩溃的插件，非必须）
+
 ![Image]({{ site.baseurl }}/images/reveal1.jpg)
 ![Image]({{ site.baseurl }}/images/reveal2.jpg)
 
@@ -34,6 +35,7 @@ Reveal.framework被加载后，会用mDNS协议在同一局域网发布一个类
 ![Image]({{ site.baseurl }}/images/reveal4.jpg)
 
 #####5.启动reveal，选择connection 为已动态链接的App
+
 ### Body text
 确保服务开启后，打开Reveal，查看界面布局，诸如视图，属性，约束，层次等信息，有助于界面debug.
 
