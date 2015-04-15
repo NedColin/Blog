@@ -11,6 +11,7 @@ Reveal可以实时查看当前界面视图层次，很有助于界面debug,步�
 ![Image]({{ site.baseurl }}/images/reveal2.jpg)
 
 进入/Library/MobileSubstrate/DynamicLibraries/,将Reveal.framework libReveal.dylib libReveal.plist三个文件拷贝到该目录。
+
 其中libReveal.plist为App的bundleIdentifier：
 
 {
