@@ -4,7 +4,6 @@ date: 2015-05-26 19:55:16
 categories: jekyll testing
 ---
 
-## Code
 
 默认情况下，block是分配在栈上，他们出了他们被定义的范围内就会被销毁，这使得代码相当危险。
 
