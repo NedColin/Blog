@@ -1,7 +1,7 @@
 name: 宝宝
 author: Ned Colin
 baseurl: /Blog
-description: theme for jekyll
+description: 只赌珠玑满斗
 github: http://www.github.com/arnp
 twitter: http://www.twitter.com/
 facebook: http://www.facebook.com
@@ -29,3 +29,4 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
